@@ -66,8 +66,13 @@ const images = [
   },
 ];
 
-// Створення списку li з посиланням на картинки
+// Описаний в документації
+import SimpleLightbox from "simplelightbox";
+// Додатковий імпорт стилів
+import "simplelightbox/dist/simple-lightbox.min.css";
 
+
+// Створення списку li з посиланням на картинки
 
 const galleryMarkup = images
     .map(({original, preview, description}) => `
@@ -84,3 +89,7 @@ const galleryMarkup = images
 
 galleryContainer.innerHTML += galleryMarkup;
 
+const lightbox = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionDelay: 250,
+});
