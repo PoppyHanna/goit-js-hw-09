@@ -1,3 +1,7 @@
+body {
+  background-color: #f0f8ff;
+}
+
 ul {
   list-style: none;
 }
@@ -5,7 +9,7 @@ ul {
 .gallery-title {
   display: inline-block;
   padding-left: 50px;
-  font-size: 72px;
+  font-size: 52px;
   text-shadow: 6px 6px 8px #e0ffff;
   background-image: linear-gradient(120deg, #6495ed 30%, #ff69b4);
   -webkit-text-fill-color: transparent;
@@ -16,7 +20,7 @@ ul {
 .link-1 {
   color: #8b008b;
   padding-left: 50px;
-  font-size: 35px;
+  font-size: 25px;
   font-weight: 500;
   letter-spacing: 0.02em;
   line-height: 1.5;
