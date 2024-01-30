@@ -1,27 +1,3 @@
-body {
-  background: #fff;
-  margin: 0 auto;
-}
-
-ul {
-  list-style: none;
-}
-.hero-title {
-}
-
-.nav-list {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
-}
-
-.nav-link {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-}
-.nav-link:hover,
-.nav-link:focus {
-  color: #747bff;
-}
+@import url(./reset.css);
+@import url(./1-gallery.css);
+@import url(./2-form.css);
