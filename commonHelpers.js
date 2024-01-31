@@ -4,8 +4,7 @@ import"./assets/modulepreload-polyfill-3cfb730f.js";import{S as i}from"./assets/
     <img
     class="gallery-image"
     src="${o}" 
-    data-source="${p}"
     alt="${a}"/>
     </a>
-  </li>`).join("");t.innerHTML+=n;new i(".gallery a",{captionsData:"alt",captionDelay:250});
+  </li>`).join("");t.innerHTML=n;new i(".gallery a",{captionsData:"alt",captionDelay:250});
 //# sourceMappingURL=commonHelpers.js.map
