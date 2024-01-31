@@ -81,13 +81,12 @@ const galleryMarkup = images
     <img
     class="gallery-image"
     src="${preview}" 
-    data-source="${original}"
     alt="${description}"/>
     </a>
   </li>`)
   .join('');
 
-galleryContainer.innerHTML += galleryMarkup;
+galleryContainer.innerHTML = galleryMarkup;
 
 const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',

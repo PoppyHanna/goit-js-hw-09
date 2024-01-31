@@ -3,23 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const emailInput = form.querySelector('input[name="email"]');
   const messageTextarea = form.querySelector('textarea[name="message"]');
 
-  emailInput.addEventListener('focus', () => {
-    emailInput.placeholder = 'Type area';
-  });
-    emailInput.addEventListener('blur', () => {
-    emailInput.placeholder = '';
-    emailInput.value = ''; // Очистити поле вводу email при втраті фокусу
-  });
-
-     messageTextarea.addEventListener('focus', () => {
-    messageTextarea.placeholder = 'Type message';
-  });
-
-  messageTextarea.addEventListener('blur', () => {
-    messageTextarea.placeholder = '';
-    messageTextarea.value = '';
-  });
-    
     
   form.addEventListener('input', (event) => {
     if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
@@ -49,10 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const message = form.message.value.trim();
 
     if (email && message) {
-      console.log({ email, message });
+      form.reset();
 
       localStorage.removeItem('feedback-form-state');
-      form.reset();
+      console.log({ email, message });
+    }
+    else {
+      alert('Please fill in all fields of the form!')
     }
   });
 });
