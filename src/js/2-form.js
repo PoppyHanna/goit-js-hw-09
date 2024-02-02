@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('input', (event) => {
     if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
       const formData = {
-        email: form.email.value.trim(),
-        message: form.message.value.trim(),
+        email: emailInput.value.trim(),
+        message: messageTextarea.value.trim(),
       };
 
       localStorage.setItem('feedback-form-state', JSON.stringify(formData));
@@ -20,16 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (savedFormData) {
       const parsedData = JSON.parse(savedFormData);
-      form.email.value = parsedData.email;
-      form.message.value = parsedData.message;
+      emailInput.value = parsedData.email;
+      messageTextarea.value = parsedData.message;
     }
   });
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageTextarea.value.trim();
 
     if (email && message) {
       form.reset();
